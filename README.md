@@ -8,18 +8,18 @@ O Data Frame em questão consiste em registros de ameaças cibernéticas globais
 
 O Data Frame está dividido da **seguinte maneira**:
 
-| Nome da Coluna            | Descrição                                         |
-| ------------------------- | ------------------------------------------------- |
-| **Country**               | País onde ocorreu o ataque                        |
-| **Year**                  | Ano do incidente                                  |
-| **Threat Type**           | Tipo de ameaça cibernética (ex.: Malware, DDoS)   |
-| **Attack Vector**         | Método do ataque (ex.: Phishing, SQL Injection)   |
-| **Affected Industry**     | Setor alvo (ex.: Financeiro, Saúde)               |
-| **Data Breached (GB)**    | Volume de dados comprometidos (em GB)             |
-| **Financial Impact ($M)** | Perda financeira estimada (em milhões de dólares) |
-| **Severity Level**        | Nível de severidade (Baixo, Médio, Alto, Crítico) |
-| **Response Time (Hours)** | Tempo para mitigar o ataque (em horas)            |
-| **Mitigation Strategy**   | Contramedidas adotadas                            |
+| Nome da Coluna                      | Descrição                                               |
+|-------------------------------------|---------------------------------------------------------|
+| Country                             | País onde ocorreu o ataque                              |
+| Year                                | Ano do incidente                                        |
+| Attack Type                         | Tipo de ameaça (ex.: Malware, DDoS)                     |
+| Target Industry                     | Setor alvo (ex.: Financeiro, Saúde)                     |
+| Financial Loss (in Million $)       | Perda financeira estimada (em Milhões de dólares)       |
+| Number of Affected Users            | Número de usuários comprometidos                        |
+| Attack Source                        | Fonte de ataque (Hacker Group, Unknown)                |
+| Security Vulnerability Type         | Tipo de vulnerabilidade de sistema                      |
+| Defense Mechanism Used              | Tipo de mecanismo de defesa utilizado como contramedida |
+| Incident Resolution Time (in Hours) | Tempo de resolução do problema (em Horas)               |
 
 ## 🔍 Escolha do Data Frame
 A escolha deste Data Frame foi baseada em sua **estrutura bem definida**, **variedade de atributos** e **visualização de dados**.
