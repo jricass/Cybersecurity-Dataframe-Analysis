@@ -16,7 +16,7 @@ O Data Frame está dividido da **seguinte maneira**:
 | Target Industry                     | Setor alvo (ex.: Financeiro, Saúde)                     |
 | Financial Loss (in Million $)       | Perda financeira estimada (em Milhões de dólares)       |
 | Number of Affected Users            | Número de usuários comprometidos                        |
-| Attack Source                        | Fonte de ataque (Hacker Group, Unknown)                |
+| Attack Source                       | Fonte de ataque (Hacker Group, Unknown)                 |
 | Security Vulnerability Type         | Tipo de vulnerabilidade de sistema                      |
 | Defense Mechanism Used              | Tipo de mecanismo de defesa utilizado como contramedida |
 | Incident Resolution Time (in Hours) | Tempo de resolução do problema (em Horas)               |
@@ -46,6 +46,8 @@ df['Colunas Nominais'].unique() # Verificação de intercorrencias em cada colun
 Obtenção de resultados a partir do método `df.describre()`.
 ## 👀 Visualizações Básicas
 Uso da biblioteca `seaborn` para plotagem de gráficos básicos sobre os dados presentes no Data Frame.
+### Exemplo:
+![Meu Gráfico](assets/seaborn.png)
 
 # 🔧 Tratamento de Dados
 ## 😵‍💫 Identificação Problemas e Criação da Coluna `Severity`
