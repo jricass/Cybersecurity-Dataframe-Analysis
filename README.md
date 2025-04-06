@@ -89,12 +89,25 @@ As visualizações foram escolhidas com base na clareza e impacto visual dos dad
 O Streamlit foi escolhido por sua facilidade e agilidade para criação de dashboards interativos, permitindo foco na análise de dados sem complexidade excessiva.
 
 ### Funcionalidades Utilizadas:
+Bibliotecas:
+- `streamlit` para dashboards.
+- `plotly.express` para plotagem dos gráficos.
+- `base64` para converter imagem para uso em HTML.
 
-- `st.title()` e `st.subheader()` para estruturar o layout.
-- `st.sidebar.multiselect()` para filtros interativos.
-- `st.columns()` para exibição de métricas.
-- `st.plotly_chart()` para gráficos dinâmicos com Plotly.
-- `st.cache_data` para otimização no carregamento de dados.
+Funções do `streamlit`:
+- `st.set_page_config(layout='wide')`: para definir a largura completa da página.
+- `st.title()`: título com maior destaque.
+- `st.markdown()`: para utilização da formatação em formato markdown.
+- `st.columns()`: para aplicar uma divisão de colunas na página.
+- `st.dataframe()`: carregamento de um data frame ou tabela.
+- `st.multiselect()`: criação de uma caixa de multiseleção para aplicação de filtros nesse caso.
+- `st.metric()`: formatação padrão de métricas, facilita a exposição na tela.
+- `st.tabs()`: criação de um 'dataset' que divide em tabs variáveis utilizando o `with`.
+
+Funções do `plotly.express`:
+- `px.line()`: cria um gráfico de linha, usado para mostrar a evolução temporal dos casos.
+- `px.bar()`: cria um gráfico de barras verticais ou horizontais.
+- `px.pie()`: gráfico de pizza.
 
 ## 🧪 Implementação de Filtros para exploração dinâmica dos dados
 
@@ -105,5 +118,3 @@ Os seguintes filtros foram implementados na `sidebar`:
 - **Filtro por tipo de Ataque**: Permite selecionar qual foi o tipo de ataque ocorrido (ex.: Malware, DDoS, Phising, etc.)
 
 Esses filtros afetam diretamente os dados exibidos nas visualizações, permitindo ao usuário personalizar a análise conforme o contexto desejado.
-
----

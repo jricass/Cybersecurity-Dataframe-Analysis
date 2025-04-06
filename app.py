@@ -65,7 +65,7 @@ selecao_countries = st.sidebar.multiselect("🚩 País", options=sorted(df["Coun
 
 selecao_attack_type = st.sidebar.multiselect("🦠 Tipo de Ataque", options=sorted(df["Attack Type"].unique()), default=df["Attack Type"].unique())
 
-# isin Vai retornar True se o valor existe na lista
+# isin vai retornar True se o valor existe na lista
 filtro = df[df["Year"].isin(selecao_years) & df["Country"].isin(selecao_countries) & df["Attack Type"].isin(selecao_attack_type)]
 
 # Main - Métricas
@@ -86,14 +86,14 @@ tabs = st.tabs([
 
 # Gráfico 1: Incidentes por Ano
 with tabs[0]:
-  st.subheader("🕒 Incidentes por Ano")
+  st.markdown("### 🕒 Incidentes por Ano")
   ataqeu_por_ano = filtro.groupby("Year").size().reset_index(name="Total Ataques")
   fig1 = px.line(ataqeu_por_ano, x="Year", y="Total Ataques", markers=True)
   st.plotly_chart(fig1)
 
 # Gráfico 2: Perda Financeira por País
 with tabs[1]:
-  st.subheader("💸 Perda Financeira por País")
+  st.markdown("### 💸 Perda Financeira por País")
   debito_por_pais = filtro.groupby("Country")["Financial Loss (in Million $)"].sum().reset_index()
   fig2 = px.bar(debito_por_pais.sort_values("Financial Loss (in Million $)", ascending=False), 
                 x="Country", y="Financial Loss (in Million $)", color="Country")
@@ -101,7 +101,7 @@ with tabs[1]:
 
 # Gráfico 3: Setores Visados
 with tabs[2]:
-  st.subheader("📊 Setores Mais Alvejados")
+  st.markdown("### 📊 Setores Mais Alvejados")
   setores_atingidos = filtro["Target Industry"].value_counts().reset_index()
   setores_atingidos.columns = ["Setor", "Número de Ataques"]
   fig3 = px.bar(setores_atingidos, x="Número de Ataques", y="Setor", orientation="h", color="Setor")
@@ -109,7 +109,7 @@ with tabs[2]:
 
 # Gráfico 4: Tempo Médio de Resolução por Ano
 with tabs[3]:
-  st.subheader("🕒 Tempo Médio de Resolução de Incidentes")
+  st.markdown("### 🕒 Tempo Médio de Resolução de Incidentes")
   tempo_resolucao = filtro.groupby("Year")["Incident Resolution Time (in Hours)"].mean().reset_index()
   fig4 = px.line(tempo_resolucao, x="Year", y="Incident Resolution Time (in Hours)", markers=True)
   st.plotly_chart(fig4)
