@@ -52,13 +52,13 @@ Uso da biblioteca `seaborn` para plotagem de gráficos básicos sobre os dados p
 # 🔧 Tratamento de Dados
 ## 😵‍💫 Identificação Problemas e Criação da Coluna `Severity`
 A base de dados **não possuia presença de nenhum dado faltante ou duplicado**.
-Em função disso as etapas de atribuição de novos dados a partir de métricas estatísticas não foi possível. Entretanto, foi criada uma nova Coluna chamada `Severity` que calcula a severidade do ataque cibernético registrado baseado nos valores estatísticos das colunas `Financial Loss` e `Number of Affected Users`.
+Em função disso as etapas de atribuição de novos dados a partir de métricas estatísticas não foi possível. Entretanto, foi criada uma nova Coluna chamada `Severity` que calcula a severidade do crime cibernético registrado baseado nos valores estatísticos das colunas `Financial Loss` e `Number of Affected Users`.
 
 # 🧠 Planejamento do Dashboard
 
 ## 🎯 Visualizações que serão incluídas
 
-O dashboard foi projetado utilizando a ferramenta **streamlit** e serve para exibir os principais aspectos de ataques cibernéticos entre 2015 e 2024. Gráficos presentes:
+O dashboard foi projetado utilizando a ferramenta **streamlit** e serve para exibir os principais aspectos de crimes cibernéticos entre 2015 e 2024. Gráficos presentes:
 
 ### Dividios por `st.tables`
 - **📈 Métricas Gerais**: total de incidentes, perdas financeiras e número de usuários afetados.
@@ -118,3 +118,18 @@ Os seguintes filtros foram implementados na `sidebar`:
 - **Filtro por tipo de Ataque**: Permite selecionar qual foi o tipo de ataque ocorrido (ex.: Malware, DDoS, Phising, etc.)
 
 Esses filtros afetam diretamente os dados exibidos nas visualizações, permitindo ao usuário personalizar a análise conforme o contexto desejado.
+
+# 😁 Principais Insights obtidos
+
+## Com todos os Dados
+- Setor mais visado de todos os tempos 'IT'.
+- UK foi o país mais afetado em relações econômicas.
+- 2019 foi o ano com a menor quantidade de ataques registrados, enquanto 2017 foi o com mais registros.
+- O Tipo de ataque é balanceado se considerar todo o período juntamente com todos os países.
+
+## Análise por País
+### UK
+- Em 2015 o tipo de crime mais frequente era o `Phising` juntamente com o `Ransomware`. Já em 2024 `Man-in-the-Middle` ganhou destaque ao lado do `Phising`.
+- Em 2024 o setor mais afetado foi `Retail`.
+- De todos os crimes, `Phising` foi o mais famoso em todo o período, com 64 casos, enquanto `Malware` e `SQL Injection` registraram 49 casos cada.
+
