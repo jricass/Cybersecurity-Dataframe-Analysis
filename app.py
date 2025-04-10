@@ -79,7 +79,7 @@ st.markdown('---')
 # Main
 tabs = st.tabs([
   "🕒 Incidentes por Ano",
-  "💸 Perda por País",s
+  "💸 Perda por País",
   "📊 Setores Visados",
   "🕒 Tempo Médio de Resolução"
 ])
