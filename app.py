@@ -70,7 +70,7 @@ filtro = df[df["Year"].isin(selecao_years) & df["Country"].isin(selecao_countrie
 
 # Main - Métricas
 st.markdown("# 📈 Métricas Gerais")
-col1, col2, col3 = st.columns(3)
+col1, col2, col3 = st.columnr(3)
 col1.metric("Total de Incidentes", len(filtro))
 col2.metric("Perda Total (Mi $)", f"{filtro['Financial Loss (in Million $)'].sum():,.2f}")
 col3.metric("Usuários Afetados", f"{filtro['Number of Affected Users'].sum():,.0f}")
@@ -79,7 +79,7 @@ st.markdown('---')
 # Main
 tabs = st.tabs([
   "🕒 Incidentes por Ano",
-  "💸 Perda por País",
+  "💸 Perda por País",s
   "📊 Setores Visados",
   "🕒 Tempo Médio de Resolução"
 ])
